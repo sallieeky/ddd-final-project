@@ -2,19 +2,17 @@
 
 namespace App\Domains\Products\Models;
 
-use App\Domains\Products\Builders\ProductBuilder;
-// use Ecommerce\Common\DataTransferObjects\Product\CategoryData;
-// use Ecommerce\Common\DataTransferObjects\Product\ProductData;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
     use HasFactory;
 
-    protected static function newFactory()
-    {
-        return \Database\Factories\ProductFactory::new();
-    }
+    // protected static function newFactory()
+    // {
+    //     return \Database\Factories\ProductFactory::new();
+    // }
 
     public function category()
     {
@@ -25,25 +23,4 @@ class Product extends Model
     {
         return '$' . number_format($this->price, 2);
     }
-
-    public function newEloquentBuilder($query)
-    {
-        return new ProductBuilder($query);
-    }
-
-    // public function toData(): ProductData
-    // {
-    //     return new ProductData(
-    //         $this->id,
-    //         $this->name,
-    //         $this->description,
-    //         $this->price,
-    //         new CategoryData(
-    //             /** @phpstan-ignore-next-line */
-    //             $this->category->id,
-    //             /** @phpstan-ignore-next-line */
-    //             $this->category->name,
-    //         ),
-    //     );
-    // }
 }
