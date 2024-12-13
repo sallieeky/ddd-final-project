@@ -73,5 +73,11 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": {
+        "gitlab.com/13589611": {
+            "type": "composer",
+            "url": "https://gitlab.com/api/v4/group/13589611/-/packages/composer/packages.json"
+        }
+    }
 }

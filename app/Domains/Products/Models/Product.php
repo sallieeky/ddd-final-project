@@ -3,8 +3,8 @@
 namespace App\Domains\Products\Models;
 
 use App\Domains\Products\Builders\ProductBuilder;
-use Ecommerce\Common\DataTransferObjects\Product\CategoryData;
-use Ecommerce\Common\DataTransferObjects\Product\ProductData;
+// use Ecommerce\Common\DataTransferObjects\Product\CategoryData;
+// use Ecommerce\Common\DataTransferObjects\Product\ProductData;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Product extends Model
@@ -31,19 +31,19 @@ class Product extends Model
         return new ProductBuilder($query);
     }
 
-    public function toData(): ProductData
-    {
-        return new ProductData(
-            $this->id,
-            $this->name,
-            $this->description,
-            $this->price,
-            new CategoryData(
-                /** @phpstan-ignore-next-line */
-                $this->category->id,
-                /** @phpstan-ignore-next-line */
-                $this->category->name,
-            ),
-        );
-    }
+    // public function toData(): ProductData
+    // {
+    //     return new ProductData(
+    //         $this->id,
+    //         $this->name,
+    //         $this->description,
+    //         $this->price,
+    //         new CategoryData(
+    //             /** @phpstan-ignore-next-line */
+    //             $this->category->id,
+    //             /** @phpstan-ignore-next-line */
+    //             $this->category->name,
+    //         ),
+    //     );
+    // }
 }

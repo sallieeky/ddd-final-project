@@ -39,7 +39,7 @@ class ProductController extends Controller
         );
 
         return response([
-            'data' => $product->toData()
+            'data' => $product
         ], Response::HTTP_CREATED);
     }
 }
