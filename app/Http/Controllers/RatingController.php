@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Actions\RateProductAction;
-use App\Http\Requests\GetRatingsRequest;
-use App\Http\Requests\RateProductRequest;
+use App\Http\Requests\Ratings\GetRatingsRequest;
+use App\Http\Requests\Ratings\RateProductRequest;
 use App\Http\Resources\ProductResource;
 use App\Http\Resources\RatingResource;
 use App\Models\Product;

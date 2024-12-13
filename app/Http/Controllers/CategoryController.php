@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\Products\StoreCategoryRequest;
 use App\Models\Category;
 
 class CategoryController extends Controller
