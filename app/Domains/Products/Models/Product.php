@@ -9,10 +9,10 @@ class Product extends Model
 {
     use HasFactory;
 
-    // protected static function newFactory()
-    // {
-    //     return \Database\Factories\ProductFactory::new();
-    // }
+    protected static function newFactory()
+    {
+        return \Database\Factories\ProductFactory::new();
+    }
 
     public function category()
     {
