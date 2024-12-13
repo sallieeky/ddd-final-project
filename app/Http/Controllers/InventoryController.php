@@ -13,8 +13,8 @@ class InventoryController extends Controller
     public function store(StoreInventoryRequest $request, ActionsCreateInventoryAction $createInventory)
     {
         $inventoryData = $createInventory->execute(
-            Product::findOrFail($request->getProductId()),
-            Warehouse::findOrFail($request->getWarehouseId()),
+            Product::findOrFail($request->input('productId')),
+            Warehouse::findOrFail($request->input('warehouseId')),
             $request->input('quantity')
         );
 
