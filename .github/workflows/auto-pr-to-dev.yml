@@ -25,8 +25,8 @@ jobs:
           BRANCH_NAME=${GITHUB_REF#refs/heads/}
           EXISTING_PR=$(gh pr list --base main --head $BRANCH_NAME --json number --jq '. | length')
           echo "existing_pr=$EXISTING_PR" >> $GITHUB_ENV
-        # env:
-        #   GH_TOKEN: ${{ secrets.MY_GITHUB_PAT }}
+        env:
+          GH_TOKEN: ${{ secrets.MY_GITHUB_PAT }}
 
       - name: Create Pull Request to main
         if: env.existing_pr == '0' && github.ref != 'refs/heads/main' && github.ref != 'refs/heads/main'
@@ -38,5 +38,5 @@ jobs:
             --base main \
             --head ${BRANCH_NAME}
 
-        # env:
-        #   GITHUB_TOKEN: ${{ secrets.MY_GITHUB_PAT }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_PAT }}
