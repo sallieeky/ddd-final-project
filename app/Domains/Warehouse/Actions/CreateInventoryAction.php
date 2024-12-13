@@ -3,7 +3,7 @@
 namespace App\Actions;
 
 use App\Models\Inventory;
-use App\Models\Product;
+use App\Domains\Products\Models\Product;
 use App\Models\Warehouse;
 use App\Services\RedisService;
 use Ecommerce\Common\DataTransferObjects\Warehouse\InventoryData;

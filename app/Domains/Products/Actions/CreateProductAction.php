@@ -3,7 +3,7 @@
 namespace App\Actions;
 
 use App\Models\Category;
-use App\Models\Product;
+use App\Domains\Products\Models\Product;
 use App\Services\RedisService;
 
 class CreateProductAction

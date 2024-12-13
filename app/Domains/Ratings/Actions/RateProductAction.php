@@ -2,7 +2,7 @@
 
 namespace App\Actions;
 
-use App\Models\Product;
+use App\Domains\Products\Models\Product;
 use App\Models\ProductRating;
 use App\Services\RedisService;
 use Ecommerce\Common\DataTransferObjects\Rating\ProductRatingData;

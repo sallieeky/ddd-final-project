@@ -2,7 +2,7 @@
 
 namespace App\Actions;
 
-use App\Models\Product;
+use App\Domains\Products\Models\Product;
 use Ecommerce\Common\DataTransferObjects\Product\ProductData;
 
 class CreateProductAction

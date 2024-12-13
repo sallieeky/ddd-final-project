@@ -3,7 +3,7 @@
 namespace App\Builders;
 
 use App\Models\Inventory;
-use App\Models\Product;
+use App\Domains\Products\Models\Product;
 use Ecommerce\Common\DataTransferObjects\Warehouse\InventoryData;
 use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Builder;

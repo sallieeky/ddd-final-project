@@ -7,7 +7,7 @@ use App\Http\Requests\Ratings\GetRatingsRequest;
 use App\Http\Requests\Ratings\RateProductRequest;
 use App\Http\Resources\ProductResource;
 use App\Http\Resources\RatingResource;
-use App\Models\Product;
+use App\Domains\Products\Models\Product;
 use Symfony\Component\HttpFoundation\Response;
 
 class RatingController extends Controller

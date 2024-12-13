@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace App\Domains\Products\Models;
 
-use App\Builders\ProductBuilder;
+use App\Domains\Products\Builders\ProductBuilder;
 use Ecommerce\Common\DataTransferObjects\Product\CategoryData;
 use Ecommerce\Common\DataTransferObjects\Product\ProductData;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

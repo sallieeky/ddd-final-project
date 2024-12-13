@@ -6,7 +6,7 @@ use App\Actions\CreateProductAction;
 use App\Http\Requests\Products\GetProductsRequest;
 use App\Http\Requests\Products\StoreProductRequest;
 use App\Models\Category;
-use App\Models\Product;
+use App\Domains\Products\Models\Product;
 use Symfony\Component\HttpFoundation\Response;
 
 class ProductController extends Controller

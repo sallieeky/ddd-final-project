@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Ratings\Requests;
+namespace App\Http\Requests\Ratings;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;

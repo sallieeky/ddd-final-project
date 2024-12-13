@@ -4,7 +4,7 @@ namespace App\Actions;
 
 use App\Exceptions\ProductInventoryExceededException;
 use App\Models\Inventory;
-use App\Models\Product;
+use App\Domains\Products\Models\Product;
 use App\Services\RedisService;
 use Ecommerce\Common\DataTransferObjects\Order\OrderData;
 use Ecommerce\Common\DataTransferObjects\Warehouse\InventoryData;
