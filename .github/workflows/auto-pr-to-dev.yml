@@ -1,0 +1,42 @@
+name: Auto Create PR to Dev
+
+on:
+  push:
+    branches: # This will trigger the workflow on pushes to all branches except main and dev
+      - '**'
+      - '!main'
+      - '!dev'
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Check for existing PR
+        id: check_pr
+        run: |
+          BRANCH_NAME=${GITHUB_REF#refs/heads/}
+          EXISTING_PR=$(gh pr list --base main --head $BRANCH_NAME --json number --jq '. | length')
+          echo "existing_pr=$EXISTING_PR" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.MY_GITHUB_PAT }}
+
+      - name: Create Pull Request to main
+        if: env.existing_pr == '0' && github.ref != 'refs/heads/main' && github.ref != 'refs/heads/main'
+        run: |
+          BRANCH_NAME=${GITHUB_REF#refs/heads/}
+          gh pr create \
+            --title "Automated PR from ${BRANCH_NAME} to main" \
+            --body "This PR is automatically created by GitHub Actions to merge ${BRANCH_NAME} into main." \
+            --base main \
+            --head ${BRANCH_NAME}
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_PAT }}
