@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Domains\Products\Services;
 
 use Ecommerce\Common\DataTransferObjects\Product\ProductData;
 use Ecommerce\Common\Events\Product\ProductCreatedEvent;

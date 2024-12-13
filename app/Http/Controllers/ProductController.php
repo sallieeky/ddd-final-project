@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Actions\CreateProductAction;
+use App\Domains\Products\Actions\CreateProductAction;
 use App\Http\Requests\Products\GetProductsRequest;
 use App\Http\Requests\Products\StoreProductRequest;
 use App\Models\Category;

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Actions;
+namespace App\Domains\Products\Actions;
 
-use App\Models\Category;
+use App\Domains\Models\Category;
 use App\Domains\Products\Models\Product;
-use App\Services\RedisService;
+use App\Domains\Products\Services\RedisService;
 
 class CreateProductAction
 {
