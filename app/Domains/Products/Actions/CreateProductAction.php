@@ -4,7 +4,6 @@ namespace App\Domains\Products\Actions;
 
 use App\Domains\Products\Models\Category;
 use App\Domains\Products\Models\Product;
-use App\Domains\Products\Services\RedisService;
 
 class CreateProductAction
 {
