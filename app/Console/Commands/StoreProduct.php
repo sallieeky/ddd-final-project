@@ -13,7 +13,10 @@ class StoreProduct extends Command
      *
      * @var string
      */
-    protected $signature = 'api:store-product';
+    protected $signature = 'api:store-product
+                            {--name= : The name of the product}
+                            {--description= : The description of the product}
+                            {--price= : The price of the product}';
 
     /**
      * The console command description.
@@ -29,9 +32,9 @@ class StoreProduct extends Command
     {
         $product = (new CreateProductAction())->execute(
             Category::first(),
-            'Test Product',
-            'Test Product Description',
-            10.00
+            $this->option('name'),
+            $this->option('description'),
+            $this->option('price')
         );
 
         $this->info('Product stored!');
